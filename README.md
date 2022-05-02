@@ -13,15 +13,15 @@ PyTorch (tested on 1.9.1)
 
 ## Code structure
 . <br />
-├── data                    # datasets downloaded or saved here <br />
-├── labels                  # generated soft labels saved here <br />
-├── models                  # trained teacher models saved here <br />
-├── train_model_ce.py       # standard training (a teacher) with cross-entropy loss <br />
-├── models.py               # all model definitions and wrapper for sample robustness calculation <br />
-├── get_soft_labels.py      # calculate soft labels with sample robustness <br />
-├── sample_robustness.py    # methods for calculating sample robustness (sample distance, boundary distance, minimal boundary distance) <br />
-├── train_model_kd.py       # training with KD <br />
-├── README.MD               # readme file
+├── data &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # datasets downloaded or saved here <br />
+├── labels &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # generated soft labels saved here <br />
+├── models &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # trained teacher models saved here <br />
+├── train_model_ce.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # standard training (a teacher) with cross-entropy loss <br />
+├── models.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # all model definitions and wrapper for sample robustness calculation <br />
+├── get_soft_labels.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # calculate soft labels with sample robustness <br />
+├── sample_robustness.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # methods for calculating sample robustness (sample distance, boundary distance, minimal boundary distance) <br />
+├── train_model_kd.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # training with KD <br />
+├── README.MD &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # readme file
 
 ## Usage
 
