@@ -1,7 +1,7 @@
 # Zero-Shot Knowledge Distillation from a Decision-Based Black-Box Model
 
 ## Introduction
-This is accompany code and data associated with our ICML 2021 paper. 
+This is the code and data associated with our ICML 2021 paper. 
 
 https://icml.cc/virtual/2021/poster/10257
 
