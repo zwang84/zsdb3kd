@@ -41,7 +41,6 @@ LeNet-5 with MNIST:
 python get_soft_labels.py --dataset MNIST --sr_mode {sd/bd/mbd} --model_dir ./models/teacher_LeNet5_MNIST
 ```
 
-
 LeNet-5 with FashionMNIST:
 ```
 python get_soft_labels.py --dataset FASHIONMNIST --sr_mode {sd/bd/mbd} --model_dir ./models/teacher_LeNet5_FASHIONMNIST
@@ -51,6 +50,13 @@ AlexNet with CIFAR10:
 ```
 python get_soft_labels.py --dataset CIFAR10 --sr_mode {sd/bd/mbd} --model_dir ./models/teacher_AlexNet_CIFAR10
 ```
+
+### 3. Train a student model with KD, using the generated soft labels
+
+```
+python train_model_kd.py --dataset {MNIST/FASHIONMNIST/CIFAR10} --mode {small/tiny} --logits PATH_OF_SAVED_LOGITS
+```
+
 ## Citation
 If you found this code useful, please consider citing the following work. Thank you!
 ```
