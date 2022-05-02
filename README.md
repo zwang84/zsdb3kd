@@ -11,6 +11,18 @@ https://arxiv.org/abs/2106.03310
 ## Requirements
 PyTorch (tested on 1.9.1)
 
+## Code structure
+.
+├── data                    # datasets downloaded or saved here
+├── labels                  # generated soft labels saved here
+├── models                  # trained teacher models saved here
+├── train_model_ce.py       # standard training (a teacher) with cross-entropy loss
+├── models.py               # all model definitions and wrapper for sample robustness calculation
+├── get_soft_labels.py      # calculate soft labels with sample robustness
+├── sample_robustness.py    # methods for calculating sample robustness (sample distance, boundary distance, minimal boundary distance)
+├── train_model_kd.py       # training with KD
+├── README.MD               # readme file
+
 ## Usage
 
 ### 1. Train a teacher model in a standard way.
