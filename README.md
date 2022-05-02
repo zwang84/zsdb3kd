@@ -12,15 +12,15 @@ https://arxiv.org/abs/2106.03310
 PyTorch (tested on 1.9.1)
 
 ## Code structure
-.
-├── data                    # datasets downloaded or saved here
-├── labels                  # generated soft labels saved here
-├── models                  # trained teacher models saved here
-├── train_model_ce.py       # standard training (a teacher) with cross-entropy loss
-├── models.py               # all model definitions and wrapper for sample robustness calculation
-├── get_soft_labels.py      # calculate soft labels with sample robustness
-├── sample_robustness.py    # methods for calculating sample robustness (sample distance, boundary distance, minimal boundary distance)
-├── train_model_kd.py       # training with KD
+. <br />
+├── data                    # datasets downloaded or saved here <br />
+├── labels                  # generated soft labels saved here <br />
+├── models                  # trained teacher models saved here <br />
+├── train_model_ce.py       # standard training (a teacher) with cross-entropy loss <br />
+├── models.py               # all model definitions and wrapper for sample robustness calculation <br />
+├── get_soft_labels.py      # calculate soft labels with sample robustness <br />
+├── sample_robustness.py    # methods for calculating sample robustness (sample distance, boundary distance, minimal boundary distance) <br />
+├── train_model_kd.py       # training with KD <br />
 ├── README.MD               # readme file
 
 ## Usage
