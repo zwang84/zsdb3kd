@@ -9,9 +9,9 @@ https://arxiv.org/abs/2106.03310
 
 
 ## Requirements
-NumPy
-PyTorch (tested on 1.9.1)
-Torchvision
+NumPy <br />
+PyTorch (tested on 1.9.1) <br />
+Torchvision <br />
 
 ## Code structure
 . <br />
