@@ -51,5 +51,16 @@ AlexNet with CIFAR10:
 ```
 python get_soft_labels.py --dataset CIFAR10 --sr_mode {sd/bd/mbd} --model_dir ./models/teacher_AlexNet_CIFAR10
 ```
-
+## Citation
+If you found this code useful, please consider citing the following work. Thank you!
+```
+@inproceedings{wang2021zero,
+  title={Zero-shot knowledge distillation from a decision-based black-box model},
+  author={Wang, Zi},
+  booktitle={International Conference on Machine Learning},
+  pages={10675--10685},
+  year={2021},
+  organization={PMLR}
+}
+```
 This repo is under construction ...
