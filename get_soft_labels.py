@@ -101,9 +101,9 @@ if args.sr_mode == 'sd':
 elif args.sr_mode == 'bd':
     logits_idx = ['boundary_distance']
 elif args.sr_mode == 'mbd':
-    logits_idx = ['boundary_distance', 'querry1000', 'querry2000', 'querry4000', 'querry6000', 'querry8000', 
-                'querry10000', 'querry12000', 'querry14000', 'querry16000', 'querry18000', 'querry20000']
-    querry_idx = [1000, 2000, 4000, 6000, 8000, 10000, 12000, 14000, 16000, 18000, 20000]
+    logits_idx = ['boundary_distance', 'query1000', 'query2000', 'query4000', 'query6000', 'query8000', 
+                'query10000', 'query12000', 'query14000', 'query16000', 'query18000', 'query20000']
+    query_idx = [1000, 2000, 4000, 6000, 8000, 10000, 12000, 14000, 16000, 18000, 20000]
 else:
     print('ERROR! invalide sr mode')
     exit()
@@ -129,11 +129,11 @@ for class_idx in range(0,len(sub_train_loader)):
                 dist = sr_method.get_distance(xi, yi, target)
             elif args.sr_mode == 'mbd':
                 sr_method = MinimalBoundaryDist(wrapped_model, train_dataset=get_target_train_loader(target=target, batch_size=1, if_shuffle=True))
-                dist = sr_method.get_distance(xi, yi, target, query_limit=20000, querry_idx=querry_idx)
+                dist = sr_method.get_distance(xi, yi, target, query_limit=20000, query_idx=query_idx)
             
             assert len(dist)==len(logits_idx)
             for iii in range(len(logits_idx)):
-                logits[iii][:, target] = dist[iii]
+                logits[iii][:, target] = 1. / dist[iii]
         
         for iii in range(len(logits_idx)):
             logits[iii][:, class_idx] = np.sum(logits[iii], axis=1)

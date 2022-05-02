@@ -55,7 +55,7 @@ class MinimalBoundaryDist(object):
 
 
     def get_distance(self, x0, y0, target, alpha = 0.2, beta = 0.001, iterations = 5000, query_limit=20000,
-                        querry_idx = [1000, 2000, 4000, 6000, 8000, 10000, 12000, 14000, 16000, 18000, 20000],
+                        query_idx = [1000, 2000, 4000, 6000, 8000, 10000, 12000, 14000, 16000, 18000, 20000],
                         distortion=None, seed=None, svm=False, stopping=0.0001):
         """ Attack the original image and return adversarial example
             model: (pytorch model)
@@ -68,7 +68,7 @@ class MinimalBoundaryDist(object):
         query_counts = [0 for _ in range(batch_size)]
         best_thetas, g_thetas = np.zeros(x0.shape), np.array([float('inf') for _ in range(batch_size)])
         dists = []
-        querry_flags = [True for _ in range(len(querry_idx))]
+        query_flags = [True for _ in range(len(query_idx))]
 
         timestart = time.time()
 
@@ -164,10 +164,10 @@ class MinimalBoundaryDist(object):
             query_counts += (grad_queries + ls_counts)
             distortions.append(gg)
 
-            for qi in range(len(querry_idx)):
-                if np.mean(query_counts) >= querry_idx[qi] and querry_flags[qi] == True:
+            for qi in range(len(query_idx)):
+                if np.mean(query_counts) >= query_idx[qi] and query_flags[qi] == True:
                     dists.append(np.copy(gg))
-                    querry_flags[qi] = False
+                    query_flags[qi] = False
             if np.mean(query_counts) > query_limit:
                 break
 
