@@ -1,3 +1,8 @@
+'''
+Codes for the calculation of boundary distance are 
+extended from https://github.com/cmhcbb/attackbox.
+'''
+
 import random
 import time
 
