@@ -71,6 +71,12 @@ python get_soft_labels.py --dataset CIFAR10 --sr_mode {sd/bd/mbd} --model_dir ./
 python train_model_kd.py --dataset {MNIST/FASHIONMNIST/CIFAR10} --mode {small/tiny} --logits PATH_OF_SAVED_LOGITS
 ```
 
+### 4. Generate pseudo samples (ZSDB3KD)
+```
+python get_pseudo_samples.py --dataset MNIST --batch_size 200 --model_dir PATH_OF_SAVED_TEACHER_MODEL
+```
+The generated pseudo samples can be used for getting the soft labels with the 2nd and 3rd steps to test ZSDB3KD.
+
 ## Citation
 If you found this code useful, please consider citing the following work. Thank you!
 ```
@@ -83,4 +89,3 @@ If you found this code useful, please consider citing the following work. Thank 
   organization={PMLR}
 }
 ```
-This repo is under construction ...
