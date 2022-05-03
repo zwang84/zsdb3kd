@@ -22,7 +22,7 @@ Torchvision <br />
 ├── train_model_ce.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # standard training (a teacher) with cross-entropy loss <br />
 ├── models.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # all model definitions and wrapper for sample robustness calculation <br />
 ├── get_soft_labels.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # calculate soft labels with sample robustness <br />
-├── sample_robustness.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # methods for calculating sample robustness (sample distance, boundary distance, minimal boundary distance) <br />
+├── sample_robustness.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # methods for calculating sample robustness <br />
 ├── train_model_kd.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # training with KD <br />
 ├── get_pseudo_samples.py&nbsp;&nbsp;&nbsp; # generate pseudo samples with ZSDB3KD <br />
 ├── untargeted_mbd.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # calculate the untargeted distances from a noise input to boundary <br />
