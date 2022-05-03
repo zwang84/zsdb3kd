@@ -1,7 +1,7 @@
 # Zero-Shot Knowledge Distillation from a Decision-Based Black-Box Model
 
 ## Introduction
-This is accompany code and data associated with our ICML 2021 paper. 
+This is the code and data associated with our ICML 2021 paper. 
 
 https://icml.cc/virtual/2021/poster/10257
 
@@ -9,7 +9,21 @@ https://arxiv.org/abs/2106.03310
 
 
 ## Requirements
-PyTorch (tested on 1.9.1)
+NumPy <br />
+PyTorch (tested on 1.9.1) <br />
+Torchvision <br />
+
+## Code structure
+. <br />
+├── data &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # datasets downloaded or saved here <br />
+├── labels &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # generated soft labels saved here <br />
+├── models &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # trained teacher models saved here <br />
+├── train_model_ce.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # standard training (a teacher) with cross-entropy loss <br />
+├── models.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # all model definitions and wrapper for sample robustness calculation <br />
+├── get_soft_labels.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # calculate soft labels with sample robustness <br />
+├── sample_robustness.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # methods for calculating sample robustness (sample distance, boundary distance, minimal boundary distance) <br />
+├── train_model_kd.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # training with KD <br />
+├── README.MD &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # readme file
 
 ## Usage
 
